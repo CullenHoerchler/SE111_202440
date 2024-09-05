@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Week 8 demo</h1>
+    <div id = "output">
+        
+    </div>
+    <script>
+        //basic keky + value pair --> variableName = dataValue
+        var name = `cullen`
+        console.log(`Variable: ${name}`)
+        //arrays 
+        //key --> [index] or [i]
+        //create a new and populate array
+        //to just create: var people =[]
+
+        var people = [
+            `katie`,
+            `ace`,
+            `ian`
+        ]
+        console.log(`array: ${people}`)
+        console.log(`array: ${people[0]}`)
+        //arrayName[index] --> name + key = value
+        console.log(`array: ${people.length}`)
+        console.log(`array: ${people[people.length - 1]}`) //last person in the array
+
+        people[people.length] = `Jose`
+        console.log(`array: ${people}`) //entire collection of data
+        //helpful native property for array types --> .push(), adds  
+        people.push(`cullen`)
+        console.log(`array: ${people}`)
+
+        //parrellel arrays
+
+        var color = [
+            `grey`,
+            `blue`,
+            `black`,
+            `green`,
+            `purple`
+        ]
+
+        //processing arrays
+        var age = []
+       //process and data structure = for loop
+       for(let i = 0; i < people.length; i++)
+       {
+        console.log(`INDEX: ${i}\n${people[i]}'s favorite color is ${color[i]}`)
+        age.push(
+            prompt(`How old is ${people[i]}: `)
+        )
+       }
+       for(let i = 0; i < people.length; i++)
+       {
+        console.log(`${people[i]} is ${age[i]} years old`)
+       }
+       
+
+
+        //adding content to the html page
+
+        //first selecct and store the element which will hold the intended content
+        var output = document.querySelector(`#output`)
+        for(let i = 0; i < people.length; i++)
+        {
+            output.innerHTML += `<p>${i}\n${people[i]} is ${age[i]}and their favorite color is ${color[i]} </p>`
+        }
+
+        //proces through the array to add each item to  the page  
+
+
+        //objects
+        //object can handle mixed data types
+        
+        var Seranna = {
+            race: "half-elf",
+            classType: "warlock",
+            lvl: 5,
+            familiar: {fType: "psuedodragon", name : "Viktor", hp: 20},
+            hp: 33,
+            ac: 19,
+            items: ["amulet", "book", "cloak", "scholars pack"],
+            greeting: function() {alert(`Hello there ${this.name}!`)}
+        }
+
+        var Lolli = {
+            name: "Lolli",
+            race: "tabaxi",
+            classType: "Monk",
+            lvl: 7,
+            familiar: {},
+            hp: 30,
+            ac: 15,
+            items: ["claw file", "staff", "cloak", "dungeoners pack"],
+            greeting: function() {alert(`Hello there ${this.name}!`)}
+        }
+        //create an array popelated with your d&d character objects
+        var party = [
+            Seranna,
+            Lolli
+        ]
+        //empty string writing the content to html at end
+        var partyOutput = ``
+        //process the outter/main structure [standard array]
+        for(let i = 0; i < party.length; i++)
+        {
+            //this looop controls which array value {object} we are looking at
+            partyOutput += `<h3>Party Member #${i}: ${party[i].name}</h3>`
+            party[i].greeting()
+
+            for( let key in party[i])
+            {
+                //this loop goes through the individual objects at each position in the array; it will loop thorugh every KEY that each objects has
+                partyOutput += `<p><b>${key}:</b> ${party[i][key]}</p>`
+            }
+
+            partyOutput += `<hr>`
+
+        } 
+        //write the info
+        document.querySelector(`#output`).innerHTML += partyOutput
+
+
+
+    </script>
+    
+</body>
+</html>
