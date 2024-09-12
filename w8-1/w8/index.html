@@ -126,14 +126,19 @@
 				//Loop through each property in the object
 				for(key in people[i])
                 {
+
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				    outputString += `FIRST: ${people[i].first.toUpperCase()}<br>LAST: ${people[i].last.toUpperCase()}<hr>`;
-
+				    //outputString += `FIRST: ${people[i].first.toUpperCase()}<br>LAST: ${people[i].last.toUpperCase()}<hr>`;
+					outputString += `<p>${key.toUpperCase()}: ${people[i][key]}<p>`
                 }
+
+				outputString += `<hr>`
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
+
+				output.innerHTML = outputString;
 				
 
 
@@ -142,7 +147,7 @@
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
 				
-				output.innerHTML = outputString;
+				//output.innerHTML = outputString;
 
 
 		}
