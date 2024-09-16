@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Cullen Hoerchler" >
-    <meta name="description" content="Tables & Forms" >
     <title>W5 | Tables & Forms</title>
 </head>
 <style>
@@ -33,7 +31,7 @@
 
         <table>
 
-            <thead>
+            <thead><!--column headers for table in form-->
 
                 <tr>
                     <td>
@@ -50,55 +48,57 @@
 
             <tbody>
 
-
+                <!--Table Row-->
                 <tr>
-
+                    <!--first column - LABEL -->
                     <td>
-                        <label for="pName">Parent Name: </label>
+                        <label for="fName">Parent Name: </label>
                     </td>
 
-        
+                    <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="pName" id="fName">
+                        <input type="text" name="fName" id="fName">
                     </td>
 
                 </tr>
 
+                <!--Table Row-->
                 <tr>
 
-        
+                    <!--first column - LABEL -->
                     <td>
-                        <label for="cName">Childs Name: </label>
+                        <label for="lName">Childs Name: </label>
                     </td>
 
-            
+                    <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="cName" id="cName">
+                        <input type="text" name="lName" id="lName">
                     </td>
 
                 </tr>
 
-            
+                <!--Table Row-->
                 <tr>
-            
+                    <!--first column - LABEL -->
                     <td>
                         <label for="age">Child Age:</label>
                     </td>
 
-                    
+                    <!--second column- INPUT -->
                     <td>
                         <input type="text" name="age" id="age">
                     </td>
 
                 </tr>
-                
+                <!--Table Row-->
                 <tr>
 
-                
+                    <!--first column - LABEL -->
                     <td>
                         <label for="email">Email: </label>
                     </td>
 
+                    <!--second column- INPUT -->
 
                     <td>
 
@@ -108,11 +108,11 @@
 
                 </tr>
 
-    
+                <!--Table Row-->
 
                 <tr>
 
-    
+                    <!--first column - LABEL -->
 
                     <td>
 
@@ -120,12 +120,15 @@
 
                     </td>
 
-
+                    <!--second column- INPUT -->
 
                   
 
                 </tr>
 
+                <!--non text input elements-->
+
+                <!--select element creates a drop down menu-->
 
                 <tr>
 
@@ -159,7 +162,7 @@
 
                 </tr>
 
-    
+                <!--radio buttons: 'multiple choice' options, small circular buttons; can only ever choose ONE out of the set-->
 
                 <tr>
 
@@ -181,7 +184,7 @@
 
                 </tr>
 
-
+                <!--checkboxes allow for multiple responses-->
 
                 <tr>
 
@@ -214,12 +217,12 @@
 
                 <tr>
                     <td>
-                        <label for="time">Time:</label>
+                        <label for="submission-time">Time:</label>
                     
                    
                     </td>
                     <td>
-                        <input type="time" id="time" name="time" required>
+                        <input type="time" id="submission-time" name="submission-time" required>
                     </td>
                     
                     </tr>
@@ -273,7 +276,7 @@
                     </td>
                 </tr>
 
-            
+                <!--submit button! must have for functionality!-->
 
                 <tr>
 
